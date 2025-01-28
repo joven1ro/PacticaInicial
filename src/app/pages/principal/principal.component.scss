@@ -1,0 +1,69 @@
+/* Estilo para la barra de navegación */
+.navbar {
+    background-color: #4facfe;
+    /* Color principal de la barra */
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Estilo de la lista dentro del navbar */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    /* Espaciado entre los elementos */
+}
+
+/* Links del navbar */
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #003c8f;
+    /* Cambio de color al pasar el mouse */
+    transform: scale(1.1);
+    /* Efecto de agrandamiento */
+}
+
+/* Estilo para el contenido principal */
+.content {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f3f3f3;
+    min-height: 100vh;
+    /* Para que el contenido ocupe al menos la altura de la ventana */
+}
+
+/* Título principal */
+.content h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        /* Los links se apilan verticalmente */
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .navbar {
+        padding: 1rem 0;
+    }
+}
